@@ -22,7 +22,6 @@ def predict_encoding(file_path, n_lines=20):
     with open(file_path, 'rb') as f:
         # Join binary lines for specified number of lines
         rawdata = b''.join([f.readline() for _ in range(n_lines)])
-
     return chardet.detect(rawdata)['encoding']
 
 #считываем файл в список
